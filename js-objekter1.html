@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>JS Objekter</title>
 </head>
+
 <body>
+    <article>
 
-</body>
-<script>
-let person = {"fornavn":"Martin","efternavn":"Bregnhøi", "email":"mabe@kea.dk"};
+    </article>
+    <script>
+        let dyr = [{
+            "navn": "Gris",
+            "type": "Pattedyr",
+            "levested": "svinesti"
+        }, {
+            "navn": "Ko",
+            "type": "Pattedyr",
+            "levested": "stald"
+        }, {
+            "navn": "Hugorm",
+            "type": "krybdyr",
+            "levested": "skoven"
+        }]
 
-    console.log(person.fornavn);
+       let elm = document.querySelector("article");
+        //løb igennem array "dyr"
+        dyr.forEach(etDyr=>{
+            console.log(etDyr.navn);
+            elm.innerHTML += `<p>Navn: ${etDyr.navn} Type: ${etDyr.type} </p>`;
+        })
+
+
 
     </script>
+</body>
+
 </html>
